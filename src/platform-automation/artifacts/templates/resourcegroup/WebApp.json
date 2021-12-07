@@ -59,7 +59,7 @@
                 "comments": ".Net app. No additional configuration needed."
             },
             "html": {
-                "comments": "HTML app. No additional configuration needed"
+                "comments": "HTML app. No additional configuration needed."
             },
             "php": {
                 "phpVersion": "7.4"
