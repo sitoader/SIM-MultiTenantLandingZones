@@ -109,7 +109,7 @@ function Switch-DeploymentContext {
         Write-Verbose "Setting default context for customer deployment: $tenantId"
     }
     
-    return (Select-AzSubscription $subscription)
+    return (Select-AzSubscription -SubscriptionId $subscription -TenantId $tenantId)
     # Assuming logged in to correct tenant for now (As Lighthouse does not allow delegation on management group and subscription is minimum 'scope' for multi-tenant deploy)
     # return (Set-AzContext -Tenant $tenantId -Subscription $subscription)        
 }
