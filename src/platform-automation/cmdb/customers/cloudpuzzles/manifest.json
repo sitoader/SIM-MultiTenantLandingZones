@@ -1,0 +1,20 @@
+{
+    "artifacts": {
+        "tenant": {
+            "IT": {
+                "name": "ManagementGroups",
+                "version": "1.0"
+            }
+        },
+        "managementGroups": {},
+        "subscriptions": {},
+        "resourceGroups": {},
+        "blueprints": {}
+    },
+    "defaultDeploymentScope": {
+        "tenantId": "902a824c-330c-405f-b97e-f2bfb03df0b1",
+        "subscription": "b0fbba52-a0ae-4b41-85f0-11258598956e",
+        "location": "west europe",
+        "meta": "Trigger update"
+    }
+}

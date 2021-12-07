@@ -24,11 +24,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run artifacts test                
-        run: | 
-          Find-Module Pester|Install-Module -Scope CurrentUser -Force
-          Import-module Pester
-          ./src/platform-automation/tests/Artifacts.tests.ps1
+    # - name: Run artifacts test                
+    #   run: | 
+    #     Find-Module Pester|Install-Module -Scope CurrentUser -Force
+    #     Import-module Pester
+    #     ./src/platform-automation/tests/Artifacts.tests.ps1
 
   build-and-deploy:
     needs: test_arm_templates
