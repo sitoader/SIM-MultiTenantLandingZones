@@ -29,7 +29,7 @@ $manifest | Foreach-Object {
                 $Elements = 'artifacts',
                             'defaultDeploymentScope'|Sort-Object                                                      
                 $templateProperties = $manifest | Get-Member -MemberType NoteProperty | Sort-object -property Name| ForEach-Object Name
-                $templateProperties | Should Be $Elements
+                $templateProperties | Should -Be $Elements
             }
             It "Artifacts have required elements" {
                 $Elements = 'tenant',
@@ -38,7 +38,7 @@ $manifest | Foreach-Object {
                             'resourceGroups',
                             'blueprints'|Sort-Object                                                     
                 $templateProperties = $manifest.artifacts | Get-Member -MemberType NoteProperty |Sort-object -property Name| ForEach-Object Name
-                $templateProperties | Should Be $Elements
+                $templateProperties | Should -Be $Elements
             }
         } 
         # To do - add artifact validation (correct type, name, case-sensitivity matching and scope)
