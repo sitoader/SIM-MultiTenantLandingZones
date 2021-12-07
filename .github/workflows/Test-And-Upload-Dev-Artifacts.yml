@@ -12,7 +12,7 @@ defaults:
 
 env:
   storageAccountName: ${{ secrets.AZURE_STORAGE_ACCOUNT_DEV }}
-  storageAccountKey: ${{ secrets. AZURE_DEPLOYMENT_STORAGE_SAS_DEV }}
+  storageAccountKey: ${{ secrets.AZURE_DEPLOYMENT_STORAGE_SAS_DEV }}
   artifactsVersion: "1.0"
   artifactsSrcFolder: ./src/platform-automation/artifacts  
   deploymentAutomationCredential: ${{ secrets.AZURE_SUBSCRIPTION_CREDENTIAL }}
