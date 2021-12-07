@@ -1,19 +1,19 @@
 {
     "artifacts": {
-        "tenant": {
-            "IT": {
-                "name": "ManagementGroups",
+        "tenant": {},
+        "managementGroups": {},
+        "subscriptions": {
+            "alertQualifierRg": {
+                "name": "ResourceGroup",
                 "version": "1.0"
             }
         },
-        "managementGroups": {},
-        "subscriptions": {},
         "resourceGroups": {},
         "blueprints": {}
     },
     "defaultDeploymentScope": {
-        "tenantId": "902a824c-330c-405f-b97e-f2bfb03df0b1",
-        "subscription": "b0fbba52-a0ae-4b41-85f0-11258598956e",
+        "tenantId": "9b00ed4f-da1e-4ee4-beec-09a4ee32ad31",
+        "subscription": "9b00ed4f-da1e-4ee4-beec-09a4ee32ad31",
         "location": "west europe",
         "meta": "Trigger update"
     }

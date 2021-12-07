@@ -15,7 +15,7 @@ env:
   storageAccountKey: ${{ secrets.AZURE_DEPLOYMENT_STORAGE_SAS }}
   artifactsVersion: "1.0"
   artifactsSrcFolder: ./src/platform-automation/artifacts  
-  deploymentAutomationCredential: ${{ secrets.AZURE_SUBSCRIPTION_CREDENTIAL }}
+ # deploymentAutomationCredential: ${{ secrets.AZURE_SUBSCRIPTION_CREDENTIAL }}
 
 jobs:
   test_arm_templates:
