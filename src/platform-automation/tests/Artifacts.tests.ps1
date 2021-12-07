@@ -14,7 +14,8 @@ $manifest | Foreach-Object {
     Describe "[$customerName] validation" {
         $manifestJson = Get-Content $file -Raw -ErrorAction SilentlyContinue
         $manifest = ConvertFrom-Json -InputObject $manifestJson -ErrorAction SilentlyContinue
-
+        $file 
+        
         Context 'File Validation' {
             It 'Template ARM File Exists' {
                 Test-Path $file -Include '*.json' | Should -Be $true

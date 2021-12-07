@@ -42,6 +42,6 @@
         "tenantId": "<Tenant_ID>",
         "subscription": "<Subscription_ID>",
         "location": "west europe",
-        "meta": "Trigger update 1"
+        "meta": "Trigger update 2"
     }
 }
