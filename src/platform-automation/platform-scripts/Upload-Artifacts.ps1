@@ -15,6 +15,10 @@ if(!$storageAccountKey){
     exit 1;
 }
 
+if(!(Get-Command New-AzStorageContext -ErrorAction SilentlyContinue)){
+    Write-Verbose "Installing Powershell AZ Module"
+    $null = Find-Module -Name Az.Storage | Install-Module -Force
+}
 
 if(!$artifactsPath){
     $artifactsPath ="./src/platform-automation/artifacts/"
