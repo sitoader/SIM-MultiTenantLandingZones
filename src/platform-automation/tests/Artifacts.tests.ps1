@@ -17,11 +17,11 @@ $manifest | Foreach-Object {
 
         Context 'File Validation' {
             It 'Template ARM File Exists' {
-                Test-Path $file -Include '*.json' | Should Be $true
+                Test-Path $file -Include '*.json' | Should -Be $true
             }
 
             It 'Is a valid JSON file' {
-                $manifestJson | ConvertFrom-Json -ErrorAction SilentlyContinue | Should Not Be $Null
+                $manifestJson | ConvertFrom-Json -ErrorAction SilentlyContinue | Should -Not -Be $Null
             }
         }
         Context 'File Content Validation' {
