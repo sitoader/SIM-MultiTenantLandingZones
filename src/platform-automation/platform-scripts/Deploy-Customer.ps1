@@ -15,6 +15,11 @@ param(
       $changelogFile
 )
 
+if(!(Get-Command Add-AzAccount -ErrorAction SilentlyContinue)){
+    Write-Verbose "Installing Powershell AZ Module"
+    $null = Find-Module -Name Az | Install-Module -Force
+}
+
 $workingDir = $PSScriptRoot;
 
 <#
