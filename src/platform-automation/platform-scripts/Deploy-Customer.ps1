@@ -1,5 +1,3 @@
-#Requires -Modules @{ModuleName="Az.Resources";ModuleVersion="2.2.0"}  
-#Requires -Modules @{ModuleName="Az.Blueprint";ModuleVersion="0.2.10"}  
 [cmdletbinding()]
 param(      
       $customer="contoso",      
@@ -18,6 +16,10 @@ param(
 if(!(Get-Command Add-AzAccount -ErrorAction SilentlyContinue)){
     Write-Verbose "Installing Powershell AZ Module"
     $null = Find-Module -Name Az | Install-Module -Force
+}
+if(!(Get-Command Import-AzBlueprintWithArtifact -ErrorAction SilentlyContinue)){
+    Write-Verbose "Installing Powershell AZ Blueprints Module"
+    $null = Find-Module -Name Az.Blueprint | Install-Module -Force
 }
 
 $workingDir = $PSScriptRoot;
