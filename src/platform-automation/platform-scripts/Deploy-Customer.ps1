@@ -1,6 +1,6 @@
 [cmdletbinding()]
 param(      
-      $customer="contoso",      
+      $customer,      
       $storageAccountName,    
       $storageAccountKey,      
       $customerPath,     
