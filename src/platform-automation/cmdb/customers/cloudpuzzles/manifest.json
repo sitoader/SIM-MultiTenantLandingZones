@@ -8,7 +8,12 @@
                 "version": "1.0"
             }
         },
-        "resourceGroups": {},
+        "resourceGroups": {
+            "alertQualifierStg": {
+                "name": "StorageAccount",
+                "version": "1.0"
+            }
+        },
         "blueprints": {}
     },
     "defaultDeploymentScope": {
