@@ -1,6 +1,6 @@
 [cmdletbinding()]
 param(      
-      $customer,      
+      $customer="cloudpuzzles",      
       $storageAccountName,    
       $storageAccountKey,      
       $customerPath,     
