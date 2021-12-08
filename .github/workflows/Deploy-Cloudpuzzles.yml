@@ -1,4 +1,4 @@
-name: Customer deployment Contoso
+name: Customer deployment Cloudpuzzles
 on:   
   pull_request:
     types: [closed]
@@ -10,6 +10,7 @@ on:
 env:
   storageAccountName: ${{ secrets.AZURE_STORAGE_ACCOUNT_PROD }}
   storageAccountKey: ${{ secrets. AZURE_DEPLOYMENT_STORAGE_SAS_PROD }}
+  customerDeploymentCredential: ${{ secrets.AZURE_CLOUDPUZZLES_CREDENTIAL }}
 
 defaults: 
   run:
@@ -24,11 +25,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1  
 
-    - name: Login with Azure
-      uses: azure/login@v1
-      with: 
-        creds: '${{ secrets.AZURE_CLOUDPUZZLES_CREDENTIAL }}'
-        enable-AzPSSession: true           
+    #- name: Login with Azure
+    #  uses: azure/login@v1
+    #  with: 
+    #    creds: '${{ secrets.AZURE_CLOUDPUZZLES_CREDENTIAL }}'
+    #    enable-AzPSSession: true           
+
+    - name: Login to Azure with Powershell
+      run: ./src/platform-automation/platform-scripts/Login-WithSecretString.ps1 -secretJson '${{ env.customerDeploymentCredential }}' -verbose         
 
     - name: Run deployment with verbose output
       run: ./src/platform-automation/platform-scripts/Deploy-Customer.ps1 -customer "cloudpuzzles"  -storageAccountName '${{ env.storageAccountName }}' -storageAccountKey '${{ env.storageAccountKey }}' -verbose         
