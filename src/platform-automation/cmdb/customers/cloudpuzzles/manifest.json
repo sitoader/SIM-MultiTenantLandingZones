@@ -9,10 +9,6 @@
             }
         },
         "resourceGroups": {
-            "alertQualifierStg": {
-                "name": "StorageAccount",
-                "version": "1.0"
-            },
             "SimpleStorage1": {
                 "name": "StorageAccount",
                 "version": "1.0"
