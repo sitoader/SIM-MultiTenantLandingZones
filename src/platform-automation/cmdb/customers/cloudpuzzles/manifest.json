@@ -11,11 +11,11 @@
         "resourceGroups": {
             "alertQualifierStg": {
                 "name": "StorageAccount",
-                "version": "1.0",
-                "scope": {
-                    "subscription": "c0a060be-5a02-403d-b881-a20818fe6fbf",
-                    "resourceGroup": "alertQualifierRg"
-                }
+                "version": "1.0"
+            },
+            "SimpleStorage1": {
+                "name": "StorageAccount",
+                "version": "1.0"
             }
         },
         "blueprints": {}
