@@ -1,6 +1,11 @@
 {
     "artifacts": {
-        "tenant": {},
+        "tenant": {
+            "MTLZ": {
+                "name": "ManagementGroups",
+                "version": "1.0"
+            }
+        },
         "managementGroups": {},
         "subscriptions": {
             "alertQualifierRg": {
