@@ -9,8 +9,8 @@
             }
         },
         "resourceGroups": {
-            "cplog": {
-                "name": "LogAnalytics",
+            "alertQualifierStg": {
+                "name": "StorageAccount",
                 "version": "1.0",
                 "scope": {
                     "name": "sim-prod-alertqualifier"
