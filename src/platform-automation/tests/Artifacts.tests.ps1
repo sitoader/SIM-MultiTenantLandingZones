@@ -18,11 +18,11 @@ $manifest | Foreach-Object {
         
         Context 'File Validation' {
             It 'Template ARM File Exists' {
-                Test-Path $file -Include '*.json' | Should -Be $true
+                Test-Path $file -Include '*.json' | Should Be $true
             }
 
             It 'Is a valid JSON file' {
-                $manifestJson | ConvertFrom-Json -ErrorAction SilentlyContinue | Should -Not -Be $Null
+                $manifestJson | ConvertFrom-Json -ErrorAction SilentlyContinue | Should Not Be $Null
             }
         }
         Context 'File Content Validation' {
@@ -30,7 +30,7 @@ $manifest | Foreach-Object {
                 $Elements = 'artifacts',
                             'defaultDeploymentScope'|Sort-Object                                                      
                 $templateProperties = $manifest | Get-Member -MemberType NoteProperty | Sort-object -property Name| ForEach-Object Name
-                $templateProperties | Should -Be $Elements
+                $templateProperties | Should Be $Elements
             }
             It "Artifacts have required elements" {
                 $Elements = 'tenant',
@@ -39,7 +39,7 @@ $manifest | Foreach-Object {
                             'resourceGroups',
                             'blueprints'|Sort-Object                                                     
                 $templateProperties = $manifest.artifacts | Get-Member -MemberType NoteProperty |Sort-object -property Name| ForEach-Object Name
-                $templateProperties | Should -Be $Elements
+                $templateProperties | Should Be $Elements
             }
         } 
         # To do - add artifact validation (correct type, name, case-sensitivity matching and scope)
