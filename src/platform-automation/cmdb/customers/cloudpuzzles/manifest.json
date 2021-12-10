@@ -10,7 +10,7 @@
         },
         "resourceGroups": {
             "cplog": {
-                "name": "KeyVault",
+                "name": "LogAnalytics",
                 "version": "1.0",
                 "scope": {
                     "name": "sim-prod-alertqualifier"
