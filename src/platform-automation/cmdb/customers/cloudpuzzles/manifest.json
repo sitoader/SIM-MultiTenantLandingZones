@@ -1,11 +1,6 @@
 {
     "artifacts": {
-        "tenant": {
-            "MTLZ": {
-                "name": "ManagementGroups",
-                "version": "1.0"
-            }
-        },
+        "tenant": {},
         "managementGroups": {},
         "subscriptions": {
             "alertQualifierRg": {
@@ -14,8 +9,8 @@
             }
         },
         "resourceGroups": {
-            "SimpleStorage1": {
-                "name": "StorageAccount",
+            "cplog": {
+                "name": "KeyVault",
                 "version": "1.0"
             }
         },
