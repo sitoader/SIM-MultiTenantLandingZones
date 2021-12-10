@@ -11,10 +11,7 @@
         "resourceGroups": {
             "alertQualifierStg": {
                 "name": "StorageAccount",
-                "version": "1.0",
-                "scope": {
-                    "name": "sim-prod-alertqualifier"
-                }
+                "version": "1.0"
             }
         },
         "blueprints": {}
