@@ -185,6 +185,7 @@ function Deploy-Scope {
                 Write-Verbose "Using customer params file [$customerParamsFile]"
                 $deploymentParams.Add('TemplateParameterFile',$customerParamsFile)                
             } else {
+                Write-Verbose "Cannot find params file [$customerParamsFile]"
                 $blobParams, $templatesParamUri = Get-BlobAndUri -storage $storageAccount -blobName $blobParamsName -containerName "templates" -containerToken $containerToken        
                 if($blobParams){
                     $deploymentParams.Add('TemplateParameterUri',$templatesParamUri)                                    
