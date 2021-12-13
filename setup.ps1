@@ -11,3 +11,11 @@
 
 
  az ad sp create-for-rbac --name "SIM" --role 'Owner' --sdk-auth
+
+
+
+ #Test deploy customer:
+ Login-AzAccount
+ $stgName = "simpdevops5jo6vwexxnnhi"
+ $stgKey = "dGnnzvttxqm2iHOVzueZQ7wegrnTixSN1KzNqNqYAe9FUgn65TsJ9mMzM13XGvZA/2Nv8Voo2fYo/F5Nq5FwBw=="
+ ./src/platform-automation/platform-scripts/Deploy-Customer.ps1 -customer "cloudpuzzles"  -storageAccountName $stgName -storageAccountKey $stgKey -verbose  
