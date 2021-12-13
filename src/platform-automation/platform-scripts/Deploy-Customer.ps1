@@ -251,7 +251,8 @@ function Deploy-Scope {
                 'resourcegroup' {
                     if($deployment.scope -and $deployment.scope.name) {
                         $deploymentParams.Add("ResourceGroupName", $deployment.scope.name)
-    
+                        $strParams = $deploymentParams | Out-String
+                        Write-Verbose "Params: $strParams"
                         if($deployment.scope.subscription -and ($deployment.scope.subscription)){
                             Switch-DeploymentContext -tenantId $defaultDeploymentScope.tenantId -subscription $deployment.scope.subscription
                         }
