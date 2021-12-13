@@ -71,6 +71,7 @@ $customerRootPath = (Join-Path $customerPath $customer)
 $manifestJson = Join-path $customerRootPath $deploymentFile
 
 Write-Verbose "[-]Deploy customer $customer"
+Write-Verbose "[-]Deploying from $customerRootPath"
 
 if(!(Test-Path $manifestJson)){
     Write-Error "[FAIL]-Deploy customer - $manifestJson does not exist"
